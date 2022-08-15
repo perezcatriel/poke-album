@@ -18,7 +18,7 @@ export function pokemon(pokemon) {
 	fetch(`${URL_API}pokemon/${POKEMON}`)
 		.then((response) => response.json())
 		.then((data) => {
-			console.log(data.id, data.name, data.types[0].type.name);
+			// console.log(data.id, data.name, data.types[0].type.name, data.sprites.front_default);
 
 			card(data)
 		});
