@@ -1,21 +1,22 @@
 import { getColorPokemon } from "../utils/pokemonColors.mjs";
+import { pokemonRoute } from "../utils/pokemonRoute.mjs";
+import { pokemonList, pokemon } from "./pokemonList.mjs";
 
 export function card(data, index) {
-	// console.log(data.name, data);
 	const cards = document.getElementById("cards");
 
-
 	const card = document.createElement("div");
-	card.id = "data.id";
-
+	card.id = data.id;
 	card.style.width = "150px";
 	card.style.margin = "10px";
 	card.style.borderRadius = "10px";
 	card.style.padding = "10px";
 	card.style.boxShadow = "0 0 10px black";
 	card.style.backgroundColor = getColorPokemon(data.types[0].type.name);
-	// card.className = getColorPokemon(data.types[0].type.name);
-	console.log(getColorPokemon(data.types[0].type.name));
+	card.addEventListener("click", () => {
+		pokemonRoute(card.id)
+		
+	});
 
 	const number = document.createElement("p");
 	number.className = "number";
@@ -39,3 +40,7 @@ export function card(data, index) {
 
 	cards.append(card);
 }
+
+// function click(id) {
+// 	console.log(id, "click...");
+// }

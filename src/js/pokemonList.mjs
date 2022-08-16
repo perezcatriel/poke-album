@@ -19,23 +19,19 @@ export function pokemonList(limit, offset) {
 }
 
 pokemonList((limit = 10), (offset = 0));
-// console.log(data.count, data.results[0].name));
 
-function pokemon(pokemon) {
+export function pokemon(pokemon) {
 	let POKEMON = pokemon;
 
 	fetch(`${URL_API}/${POKEMON}`)
 		.then((response) => response.json())
 		.then((data) => {
-			// console.log(data.id, data.name, data.types[0].type.name, data.sprites.front_default);
-
 			card(data);
 		});
 }
 
 function pokemonTotal(data) {
 	const total = document.getElementById("pokemon-total");
-
 	total.innerText = data.count;
 }
 
