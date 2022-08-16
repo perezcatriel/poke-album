@@ -1,7 +1,63 @@
-#cards {
-  background-color: gray;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Rubik Distressed", cursive;
+	color: white;
+	text-shadow: 0px 0px 5px black;
+	/*   */
+}
 
+.container {
+	background-color: gray;
+	padding-bottom: 140px;
+}
+
+header {
+	margin: auto 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	justify-content: space-around;
+	font-size: 20px;
+letter-spacing: 1px;
+}
+
+.pokemon-logo {
+	width: 150px;
+	/* margin: auto; */
+}
+
+.pokemon-total {
+	margin-right: 0px;
+	text-align: right;
+	/* background-color: white; */
+	color: white;
+}
+
+#cards {
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+}
+
+.number {
+	text-align: right;
+}
+
+nav {
+	display: grid;
+	justify-items: center;
+	position: fixed;
+	bottom: 10px;
+	width: 100vw;
+	margin: auto;
+}
+
+.menu {
+	width: 100px;
+}
+
+.menu:hover {
+	transform: scale(1.5);
 }
