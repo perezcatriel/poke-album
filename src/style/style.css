@@ -10,6 +10,7 @@
 .container {
 	background-color: gray;
 	padding-bottom: 140px;
+	height:auto;
 }
 
 header {
@@ -19,7 +20,7 @@ header {
 	align-items: center;
 	justify-content: space-around;
 	font-size: 20px;
-letter-spacing: 1px;
+	letter-spacing: 1px;
 }
 
 .pokemon-logo {
