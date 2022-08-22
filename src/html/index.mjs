@@ -2,21 +2,21 @@ import { getColorPokemon } from "../utils/pokemonColors.mjs";
 
 export function getPokemon(id) {
 	const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-  console.log(url)
 
 	fetch(url)
 		.then((response) => response.json())
 		.then((data) => {
 			pokemon(data);
+			console.log(data);
 		});
 }
 
 function pokemon(data) {
-	const card = document.querySelector(".pokemon");
+	const card = document.getElementById("cards");
 
 	card.style.backgroundColor = getColorPokemon(data.types[0].type.name);
 
-	console.log(data);
+	// console.log(data);
 
 	card.innerHTML = `
   <div>
