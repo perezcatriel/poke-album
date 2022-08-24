@@ -3,7 +3,10 @@ import { pokemonList } from "../js/pokemonList.mjs";
 export function scrollInfinite(limit, offset) {
 	// const cards = document.getElementById('cards');
 
-	// cards.innerHTML = '';
+	const home = "http://127.0.0.1:5500/";
 
-	pokemonList(limit, offset);
+	// cards.innerHTML = '';
+	if (home === window.location.href) {
+		pokemonList(limit, offset);
+	}
 }

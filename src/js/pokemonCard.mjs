@@ -3,6 +3,10 @@ import { pokemonRoute } from "../utils/pokemonRoute.mjs";
 import { pokemonList, pokemon } from "./pokemonList.mjs";
 
 export function card(data, index) {
+	// const home = location;
+	// // console.log(home);
+
+	// // if (home === "http://127.0.0.1:5500/") {
 	const cards = document.getElementById("cards");
 
 	const card = document.createElement("div");
@@ -14,8 +18,7 @@ export function card(data, index) {
 	card.style.boxShadow = "0 0 10px black";
 	card.style.backgroundColor = getColorPokemon(data.types[0].type.name);
 	card.addEventListener("click", () => {
-		pokemonRoute(card.id)
-		
+		pokemonRoute(card.id);
 	});
 
 	const number = document.createElement("p");

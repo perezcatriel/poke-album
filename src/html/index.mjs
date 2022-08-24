@@ -3,11 +3,13 @@ import { getColorPokemon } from "../utils/pokemonColors.mjs";
 export function getPokemon(id) {
 	const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
 
+	console.log(id)
+
 	fetch(url)
 		.then((response) => response.json())
 		.then((data) => {
 			pokemon(data);
-			console.log(data);
+			// console.log(data);
 		});
 }
 

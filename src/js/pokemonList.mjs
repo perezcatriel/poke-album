@@ -18,7 +18,11 @@ export function pokemonList(limit, offset) {
 		});
 }
 
-pokemonList((limit = 10), (offset = 0));
+const home = window.location;
+// console.log(home.href);
+if (home.href === "http://127.0.0.1:5500/") {
+	pokemonList((limit = 10), (offset = 0));
+}
 
 export function pokemon(pokemon) {
 	let POKEMON = pokemon;
@@ -34,6 +38,7 @@ function pokemonTotal(data) {
 	const total = document.getElementById("pokemon-total");
 	total.innerText = data.count;
 }
+
 
 window.addEventListener("scroll", () => {
 	let scrollBottom = window.scrollMaxY;
