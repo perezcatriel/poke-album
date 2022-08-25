@@ -20,7 +20,7 @@ export function pokemonList(limit, offset) {
 
 const home = window.location;
 // console.log(home.href);
-if (home.href === "http://127.0.0.1:5500/") {
+if (home.href === "http://127.0.0.1:5500/index.html") {
 	pokemonList((limit = 10), (offset = 0));
 }
 
