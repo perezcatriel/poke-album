@@ -9,7 +9,7 @@ export function scrollInfinite(limit, offset) {
 	// cards.innerHTML = '';
 	if (
 		home === window.location.href ||
-		homePoduction === "https://perezcatriel.github.io/poke-album/"
+		homePoduction === window.location.href
 	) {
 		pokemonList(limit, offset);
 	}
