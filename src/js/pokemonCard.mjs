@@ -1,6 +1,7 @@
 import { getColorPokemon } from "../utils/pokemonColors.mjs";
 import { pokemonRoute } from "../utils/pokemonRoute.mjs";
 import { pokemonList, pokemon } from "./pokemonList.mjs";
+import { imagenLike } from "../assets/images/like.png";
 
 export function card(data, index) {
 	// const home = location;
@@ -37,9 +38,14 @@ export function card(data, index) {
 	name.innerText = data.name;
 	name.style.textShadow = "0 0 5px black";
 
+	const like = document.createElement("img");
+	like.src = imagenLike;
+	
+
 	card.append(number);
 	card.append(img);
 	card.append(name);
+	card.append(like);
 
 	cards.append(card);
 }
